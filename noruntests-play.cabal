@@ -1,0 +1,27 @@
+name:                noruntests-play
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/k-bx/noruntests-play#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Kostiantyn Rybnikov
+maintainer:          k-bx@k-bx.com
+copyright:           Kostiantyn Rybnikov <k-bx@k-bx.com>
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable noruntests-play
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+
+test-suite test
+  type: exitcode-stdio-1.0
+  hs-source-dirs: tests
+  main-is: Tests.hs
+  build-depends:       base
+                     , aeson
